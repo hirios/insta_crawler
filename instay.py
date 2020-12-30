@@ -3,9 +3,9 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 
-PATH = r''
-user = ''
-password = ''
+PATH = r'C:\Users\Full\Chromedriver.exe'
+user = 'alanrioscosta'
+password = 'fendadobiquinii'
 
 if len(PATH) == 0:
     PATH = input('Digite o caminho para o "chromedriver.exe": ')
@@ -87,22 +87,22 @@ class Insta():
 
     def get_list(self):
         self.lista = list(set(self.driver.find_elements_by_class_name('Jv7Aj.mArmR.MqpiF')))
-        return self.list
+        return self.lista
 
 
 def lista_seguindo():
     insta.get_values()
     insta.focus('following')
-    insta.scrool
-    lista = insta.get_list
+    insta.scrool()
+    lista = insta.get_list()
     return lista
 
 
 def lista_seguidores():
     insta.get_values()
     insta.focus('followers')
-    insta.scrool
-    lista = insta.get_list
+    insta.scrool()
+    lista = insta.get_list()
     return lista
 
 
